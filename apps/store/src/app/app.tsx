@@ -24,27 +24,26 @@ export const App = () => {
   });
 
   useEffect(() => {
-    setState({
-      ...state,
+    setState((s) => ({
+      ...s,
       loadingState: 'loading',
-    });
+    }));
 
     fetch('/api/games')
       .then((x) => x.json())
       .then((res) => {
-        setState({
-          ...state,
+        setState((s) => ({
+          ...s,
           data: res,
           loadingState: 'success',
-        });
+        }));
       })
       .catch(() => {
-        setState({
-          ...state,
+        setState((s) => ({
+          ...s,
           loadingState: 'error',
-        });
+        }));
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
