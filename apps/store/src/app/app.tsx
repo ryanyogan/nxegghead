@@ -5,6 +5,7 @@ import {
   CardMedia,
   Typography,
 } from '@material-ui/core';
+import { Game } from '@nxegghead/api/util-interfaces';
 import { StoreFeatureGameDetail } from '@nxegghead/store/feature-game-detail';
 import { Header } from '@nxegghead/store/ui-shared';
 import { formatRating } from '@nxegghead/store/util-formatters';
@@ -15,8 +16,7 @@ import './app.scss';
 export const App = () => {
   const history = useHistory();
   const [state, setState] = useState<{
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: any[];
+    data: Game[];
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: [],
@@ -49,7 +49,7 @@ export const App = () => {
 
   return (
     <>
-      <Header />
+      <Header title="Board Game Hoard" />
       <div className="container">
         <div className="games-layout">
           {state.loadingState === 'loading'

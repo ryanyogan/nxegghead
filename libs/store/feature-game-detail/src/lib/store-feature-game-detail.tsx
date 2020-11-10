@@ -5,6 +5,7 @@ import {
   CardMedia,
   Typography,
 } from '@material-ui/core';
+import { Game } from '@nxegghead/api/util-interfaces';
 import { formatRating } from '@nxegghead/store/util-formatters';
 import React, { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
@@ -18,11 +19,10 @@ export interface StoreFeatureGameDetailProps
 
 export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
   const [state, setState] = useState<{
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: any;
+    data: Game;
     loadingState: 'loading' | 'error' | 'success';
   }>({
-    data: {},
+    data: null,
     loadingState: 'success',
   });
 
