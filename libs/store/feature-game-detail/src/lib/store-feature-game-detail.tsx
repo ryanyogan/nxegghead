@@ -64,7 +64,7 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
   }
 
   return (
-    <div className="container">
+    <div className="container" data-testid="game-detail-container">
       <Card>
         <CardActionArea>
           <CardMedia
