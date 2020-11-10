@@ -41,6 +41,7 @@
     "@nrwl/cli": "10.3.2",
     "@nrwl/cypress": "10.3.2",
     "@nrwl/eslint-plugin-nx": "10.3.2",
+    "@nrwl/express": "^10.3.3",
     "@nrwl/jest": "10.3.2",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "^10.3.2",
